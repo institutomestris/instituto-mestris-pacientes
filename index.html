@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,6 +16,7 @@ a,a:link,a:visited,a:hover,a:active,a:focus{color:inherit;text-decoration:none}
 .topbar{display:flex;justify-content:space-between;align-items:center;gap:22px;min-height:78px}
 .brand{width:260px;max-width:38%;height:66px;object-fit:contain;object-position:left center}
 .nav{display:flex;align-items:center;gap:22px;font-size:13px}
+.nav a{text-decoration:none}
 .nav-cta{background:linear-gradient(100deg,#a96430,#c18a51);padding:12px 17px;border-radius:28px;color:white}
 .hero-content{padding:28px 0 24px;min-height:325px;max-width:510px}
 .hero h1{font:700 clamp(38px,4.6vw,56px)/.94 Georgia,'Times New Roman',serif;letter-spacing:-1.3px;margin:0 0 15px}
@@ -126,141 +126,3 @@ a,a:link,a:visited,a:hover,a:active,a:focus{color:inherit;text-decoration:none}
 }
 </style>
 </head>
-<body>
-<header class="hero" id="top">
-<div class="wrap">
-  <div class="topbar">
-    <img class="brand" src="logo.png" alt="Instituto Méstris">
-    <nav class="nav" aria-label="Navegação principal">
-      <a href="#tratamentos">Tratamentos</a>
-      <a href="#sobre">Sobre o Instituto</a>
-      <a href="#contato">Contato</a>
-      <a class="nav-cta" href="#formulario">Quero ser paciente modelo</a>
-    </nav>
-  </div>
-  <div class="hero-content">
-    <h1>Tratamentos<br><span>de alta qualidade<br>com propósito</span></h1>
-    <p class="hero-copy">Atendimento a pacientes modelo em procedimentos nas áreas facial e odontológica, realizados por alunos de especialização, com supervisão docente.</p>
-    <div class="benefits">
-      <div class="benefit"><span class="benefit-icon">♡</span>Atendimento<br>humanizado</div>
-      <div class="benefit"><span class="benefit-icon">✓</span>Cuidados com<br>supervisão docente</div>
-      <div class="benefit"><span class="benefit-icon">☆</span>Excelência<br>e segurança</div>
-    </div>
-  </div>
-</div>
-</header>
-<main>
-<section class="intake" id="tratamentos">
-<div class="wrap intake-grid">
-<div>
-  <h2 class="section-title">Escolha os tratamentos <span>desejados</span></h2>
-  <p class="lead muted">Você pode selecionar mais de uma opção.</p>
-  <div class="categories">
-    <button class="category active" type="button" data-tab="facial">Facial</button>
-    <button class="category" type="button" data-tab="odonto">Odontologia</button>
-  </div>
-  <div class="treatment-grid">
-    <div class="treatment-card" id="facial-card">
-      <h3>Tratamentos Faciais</h3>
-      <label class="option"><input type="checkbox" value="Toxina botulínica (Botox)">Toxina botulínica (Botox)</label>
-      <label class="option"><input type="checkbox" value="Preenchimento facial">Preenchimento facial</label>
-      <label class="option"><input type="checkbox" value="Bioestimuladores de colágeno">Bioestimuladores de colágeno</label>
-      <label class="option"><input type="checkbox" value="Skinbooster (hidratação da pele)">Skinbooster (hidratação da pele)</label>
-      <label class="option"><input type="checkbox" value="Fios de sustentação">Fios de sustentação</label>
-      <label class="option"><input type="checkbox" value="Tratamento para olheiras">Tratamento para olheiras</label>
-      <label class="option"><input type="checkbox" value="Harmonização facial">Harmonização facial</label>
-    </div>
-    <div class="treatment-card" id="odonto-card">
-      <h3>Tratamentos Odontológicos</h3>
-      <label class="option"><input type="checkbox" value="Implantes Dentários">Implantes Dentários</label>
-      <label class="option"><input type="checkbox" value="Protocolos Dentários">Protocolos Dentários</label>
-      <label class="option"><input type="checkbox" value="Clareamento dental">Clareamento dental</label>
-      <label class="option"><input type="checkbox" value="Restauração em resina composta">Restauração em resina composta</label>
-      <label class="option"><input type="checkbox" value="Facetas em resina composta">Facetas em resina composta</label>
-      <label class="option"><input type="checkbox" value="Laminados cerâmicos">Laminados cerâmicos</label>
-      <label class="option"><input type="checkbox" value="Extração de dentes do siso">Extração de dentes do siso</label>
-      <label class="option"><input type="checkbox" value="Limpeza Dentária">Limpeza Dentária</label>
-      <label class="option"><input type="checkbox" value="Limpeza de Protocolo">Limpeza de Protocolo</label>
-    </div>
-  </div>
-</div>
-<form class="form-card" id="formulario">
-  <h2>Solicite seu atendimento</h2>
-  <p class="intro">Preencha seus dados e entraremos em contato pelo WhatsApp para confirmar sua participação.</p>
-  <div class="field"><input id="nome" name="nome" placeholder="Nome completo *" autocomplete="name" required></div>
-  <div class="field"><input id="telefone" name="telefone" type="tel" placeholder="Telefone / WhatsApp (com DDD) *" autocomplete="tel" required></div>
-  <div class="field"><input id="idade" name="idade" type="number" min="1" max="120" placeholder="Idade *" required></div>
-  <div class="field"><input id="procedimentos" type="text" value="0 procedimentos selecionados" readonly aria-live="polite" aria-label="Quantidade de procedimentos selecionados"></div>
-  <div class="field"><textarea id="observacoes" placeholder="Alguma observação?"></textarea></div>
-  <button class="submit" type="submit">Solicitar atendimento pelo WhatsApp</button>
-  <p class="fine">Sua solicitação não confirma um agendamento. Nossa equipe entrará em contato para verificar disponibilidade e condições de atendimento.</p>
-</form>
-</div>
-</section>
-<section class="how" id="sobre">
-<div class="wrap how-grid">
-  <div class="how-lead"><h2>Como <span>funciona</span></h2><p class="how-intro">Um processo simples para você ser atendido com segurança e contribuir para a formação de novos especialistas.</p></div>
-  <div class="step"><div class="step-icon">1</div><strong>1. Faça sua solicitação</strong><p>Preencha o formulário com seus dados e escolha os procedimentos de interesse.</p></div>
-  <div class="step"><div class="step-icon">2</div><strong>2. Nossa equipe entra em contato</strong><p>Vamos confirmar sua participação e passar todas as orientações.</p></div>
-  <div class="step"><div class="step-icon">3</div><strong>3. Agendamento</strong><p>Combinamos a melhor data e horário para seu atendimento.</p></div>
-  <div class="step"><div class="step-icon">4</div><strong>4. Atendimento</strong><p>Você é atendido por alunos de especialização, com supervisão docente.</p></div>
-</div>
-</section>
-<section class="team">
-<div class="team-copy"><h2>Equipe <span>clínica</span></h2><p>Nossos atendimentos são realizados por alunos de especialização, sempre com acompanhamento e supervisão de docentes experientes, em um ambiente seguro e acolhedor.</p></div>
-<img src="equipe-clinica.jpg" alt="Equipe clínica em atividade supervisionada">
-</section>
-<section class="faq">
-<div class="wrap">
-<h2>Dúvidas <span>frequentes</span></h2>
-<div class="faq-list">
-  <div class="faq-item"><button class="faq-question" type="button">O tratamento é gratuito? <span class="plus">+</span></button><div class="faq-answer">As condições variam conforme o procedimento e a turma. Consulte nossa equipe para saber se há custos ou necessidade de materiais.</div></div>
-  <div class="faq-item"><button class="faq-question" type="button">Quem realiza os procedimentos? <span class="plus">+</span></button><div class="faq-answer">Os atendimentos são realizados por alunos dos cursos de especialização, com supervisão de docentes experientes e conforme as normas clínicas aplicáveis.</div></div>
-  <div class="faq-item"><button class="faq-question" type="button">Posso escolher qualquer procedimento? <span class="plus">+</span></button><div class="faq-answer">Você pode demonstrar interesse em um ou mais procedimentos. A realização depende de avaliação clínica, indicação e disponibilidade nas atividades dos cursos.</div></div>
-  <div class="faq-item"><button class="faq-question" type="button">Como confirmo meu agendamento? <span class="plus">+</span></button><div class="faq-answer">Após receber sua solicitação, nossa equipe entrará em contato pelo WhatsApp para confirmar disponibilidade, condições e próximos passos.</div></div>
-</div>
-</div>
-</section>
-</main>
-<footer class="footer" id="contato">
-<div class="wrap footer-grid">
-  <img class="footer-logo" src="logo.png" alt="Instituto Méstris">
-  <div class="contact"><span>⌖</span><span>Rua Odila Maia Rocha Brito, 497<br>Nova Campinas - Campinas-SP</span></div>
-  <div class="contact"><span>☎</span><a href="https://wa.me/5519991776278" target="_blank" rel="noopener">(19) 99177-6278</a></div>
-  <div class="contact"><span>◎</span><a href="https://www.instagram.com/institutomestris/" target="_blank" rel="noopener noreferrer">@institutomestris</a></div>
-</div>
-</footer>
-<script>
-document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b===btn));
-  const card=document.getElementById(btn.dataset.tab==='facial'?'facial-card':'odonto-card');
-  card.scrollIntoView({behavior:'smooth',block:'nearest'});
-  card.style.outline='2px solid #c18a51';
-  setTimeout(()=>card.style.outline='',1200);
-}));
-document.querySelectorAll('.faq-question').forEach(btn=>btn.addEventListener('click',()=>{
-  const item=btn.closest('.faq-item');
-  item.classList.toggle('open');
-  btn.querySelector('.plus').textContent=item.classList.contains('open')?'−':'+';
-}));
-const campoProcedimentos=document.getElementById('procedimentos');
-function atualizarQuantidade(){
-  const n=document.querySelectorAll('.option input:checked').length;
-  campoProcedimentos.value=n===1?'1 procedimento selecionado':`${n} procedimentos selecionados`;
-}
-document.querySelectorAll('.option input').forEach(input=>input.addEventListener('change',atualizarQuantidade));
-atualizarQuantidade();
-document.getElementById('formulario').addEventListener('submit',e=>{
-  e.preventDefault();
-  const selecionados=[...document.querySelectorAll('.option input:checked')].map(x=>x.value);
-  if(!selecionados.length){alert('Selecione pelo menos um procedimento.');return;}
-  const nome=document.getElementById('nome').value.trim();
-  const telefone=document.getElementById('telefone').value.trim();
-  const idade=document.getElementById('idade').value;
-  const obs=document.getElementById('observacoes').value.trim();
-  const mensagem=`Olá! Gostaria de solicitar atendimento como paciente modelo no Instituto Méstris.\nNome: ${nome}\nWhatsApp: ${telefone}\nIdade: ${idade}\nQuantidade de procedimentos selecionados: ${selecionados.length}\nProcedimentos de interesse: ${selecionados.join(', ')}\nObservações: ${obs||'Não informado'}\n\nEntendo que a solicitação depende de confirmação da equipe.`;
-  window.open('https://wa.me/5519991776278?text='+encodeURIComponent(mensagem),'_blank','noopener');
-});
-</script>
-</body>
-</html>
